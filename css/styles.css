@@ -116,6 +116,17 @@ nav h1 a {
   display: flex;
   background-color: #ccc;
 }
+
+#map-box {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  background-color: #ccc;
+}
+
+
+
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -258,7 +269,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
