@@ -1,4 +1,5 @@
 var all_cache = 'restaurantreviews-cache-v1';
+
 var urlsToCache = [
     '/',
     './index.html',
@@ -10,16 +11,17 @@ var urlsToCache = [
     '/data/restaurants.json'
 ];
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', function (event) {
     event.waitUntil(
-        caches.open(all_cache)
-        .then(function(cache) {
-            console.log('Cache Opened');
-            return cache.addAll(urlsToCache);
+      caches.open(all_cache)
+        .then(function (cache) {
+          console.log('Opened cache');
+          return cache.addAll(urlsToCache);
         })
     );
+  });
 
-});
+
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(
@@ -30,5 +32,6 @@ self.addEventListener('fetch', function(event) {
             }
             return fetch(event.request);
         })
+        .catch(error => consloe.log(error, event.request))
     );
 });
