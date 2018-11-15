@@ -209,12 +209,60 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
+#restaurants-list .fav-control {
+  background-color: white;
+  width: 44px;
+  height: 40px;
+  position: absolute;
+  align-self: flex-end;
+  margin-top: 6px;
+  margin-left: -6px;
+  padding: 5px;
+  border: 1px solid #999;
+  border: 4px double #999;
+  background-image: url('../img/icons/star.png');
+  background-repeat: no-repeat;
+  background-position: -46px -47px;
+  background-size: 125px;
+  cursor: pointer;
+  text-indent: -10000px;
+}
+#restaurants-list .fav-control.active  {
+  background-position: -46px -94px;
+}
+#restaurants-list .fav-control:hover {
+  background-position: -46px -11px;
+}
 
-.filter-selects {
+#restaurant-img-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+}
+#restaurant-fav {
+  background-color: white;
+  width: 44px;
+  height: 40px;
+  position: absolute;
+  top: 178px;
+  left: 635px;
+  align-self: flex-end;
+  margin-top: 6px;
+  margin-left: -6px;
+  padding: 5px;
+  border: 1px solid #999;
+  border: 4px double #999;
+  background-image: url('../img/icons/star.png');
+  background-repeat: no-repeat;
+  background-position: -46px -47px;
+  background-size: 125px;
+  cursor: pointer;
+  text-indent: -10000px;
+}
+#restaurant-fav.active {
+  background-position: -46px -94px;
+}
+#restaurant-fav:hover {
+  background-position: -46px -11px;
 }
 
 /* ====================== Restaurant Details ====================== */
